@@ -1,24 +1,7 @@
-# README
+# 今回学んだこと
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Rubyのif文は nil か nil以外かでも条件判断を行える
+- 気づいた箇所/サクセスメッセージ記述箇所
+- flash(変数)のnotice(キー)にメッセージ(バリュー)が与えられていればnil以外のオブジェクト全て=真判定になる
+よってサクセスメッセージが表示される
+- Javaはtrue/falseのみ
