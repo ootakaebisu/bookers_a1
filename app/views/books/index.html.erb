@@ -1,3 +1,9 @@
+<% if flash[:notice] %>
+  <p id="notice">
+    <%= flash[:notice] %>
+  </p>
+<% end %>
+
 <h1>Book</h1>
 
 <table>
@@ -24,9 +30,15 @@
 <h2>New Book</h2>
 <%= form_with model: @book, local: true do |f| %>
 <%= render 'layouts/error_message', model: f.object %>
-  <%= f.label :title, "Title" %><br>
-  <%= f.text_field :title %><br>
-  <%= f.label :body, "Body" %><br>
-  <%= f.text_area :body %><br>
-  <%= f.submit "Create Book" %>
+  <div class="field">
+    <%= f.label :title, "Title" %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :body, "Body" %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create Book" %>
+  </div>
 <% end %>
