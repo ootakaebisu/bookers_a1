@@ -1,0 +1,14 @@
+<% if flash[:notice] %><!--flash(変数)のnotice(キー)にメッセージ(バリュー)が与えられていればnil以外のオブジェクト全て=真判定になる-->
+<!--Rubyのif文は nil か nil以外かでも条件判断を行える-->
+<!--Javaは無理(結果がtrueかfalse)になる条件式じゃないとダメ)-->
+  <p id="notice">
+    <%= flash[:notice] %>
+  </p>
+<% end %>
+
+<p><strong>Title:</strong><%= @book.title %></p>
+<p><strong>Body:</strong><%= @book.body %></p>
+
+<%= link_to "Edit", edit_book_path(@book.id) %> |
+<%= link_to "Back", books_path %>
+
